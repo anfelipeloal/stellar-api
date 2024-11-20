@@ -1,0 +1,148 @@
+{
+    "info": {
+        "_postman_id": "2b7c9ded-f2d9-4231-93a6-1764396ccfc1",
+        "name": "Stellar",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "reservations",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/reservations",
+                    "path": [
+                        "reservations"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"roomId\": 1,\n  \"guestName\": \"Raúl Arango\",\n  \"checkInDate\": \"2024-12-17\",\n  \"checkOutDate\": \"2024-12-20\",\n  \"guests\": 1,\n  \"breakfast\": false\n}"
+                }
+            }
+        },
+        {
+            "name": "reservations/:id",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/reservations/3",
+                    "path": [
+                        "reservations",
+                        "3"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "reservations/:id",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:3000/reservations/1",
+                    "path": [
+                        "reservations",
+                        "1"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "rooms/available",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/rooms/available?checkInDate=2024-01-15&guests=1&breakfast=false&checkOutDate=2024-01-16",
+                    "query": [
+                        {
+                            "key": "checkInDate",
+                            "value": "2024-01-15"
+                        },
+                        {
+                            "key": "guests",
+                            "value": "1"
+                        },
+                        {
+                            "key": "breakfast",
+                            "value": "false"
+                        },
+                        {
+                            "key": "roomTypeId",
+                            "value": "2",
+                            "disabled": true
+                        },
+                        {
+                            "key": "checkOutDate",
+                            "value": "2024-01-16"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "rooms",
+                        "available"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "reservations",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/reservations",
+                    "path": [
+                        "reservations"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "room-types",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/room-types",
+                    "path": [
+                        "room-types"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        }
+    ]
+}
